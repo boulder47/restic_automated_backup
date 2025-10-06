@@ -1,0 +1,6 @@
+export RESTIC_REPOSITORY="/Volumes/backup"
+export RESTIC_PASSWORD_COMMAND='security find-generic-password -s restic -w'
+export BACKUP_PATHS=("$HOME/")
+export EXCLUDES=("--exclude=$HOME/Downloads")
+export EXCLUDE_FILE=("--exclude-file=/usr/local/var/restic/backup_exclude.txt")
+
