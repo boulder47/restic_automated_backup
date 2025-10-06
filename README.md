@@ -78,3 +78,4 @@ pid file: /usr/local/var/restic/.restic_backup.pid
 
 timestamp file: /usr/local/var/restic/.restic_backup_timestamp
 
+(we also wrote a installer script (zero-touch deployment script) that we might add here too.
