@@ -44,7 +44,7 @@ if [ -f "$TIMESTAMP_FILE" ]; then
 fi
 
 # === check network ====
-if ! ping -q -c 1 -W 3 nas.blueflame47 > /dev/null; then
+if ! ping -q -c 1 -W 3 google.com > /dev/null; then
   echo "[$(get_date)] No network. Skipping backup."
   exit 2
 fi
