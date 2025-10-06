@@ -8,14 +8,23 @@ We run via Launchd plist file.
 
 
 This script runs the following:
+
 backup hourly.
+
 check backups before backing up.
+
 runs forget and prune after each backup.
+
 logs all content to a log.
+
 checks for power,
+
 checks for network,
+
 checks for backup location readability
+
 checks for already running backup.
+
 keeps snapshots for:
 --keep-hourly 7 \
 --keep-daily 10 \
@@ -26,9 +35,13 @@ keeps snapshots for:
 
 files included:
 restic_backup.sh ( the script file ) place in /usr/local/bin/
+
 .restic_env ( the enviroment variables for restic ) place in /usr/local/var/restic/ (or change location in main script)
+
 backup_exclude.txt (places not to backup list) place in /usr/local/var/restic/ 
+
 restic_backup.plist (launchd plist file) place in /Users/=macusername=/Library/LaunchAgents/ 
+
 
 actions:
 
@@ -58,7 +71,10 @@ launchctl load /Users/=macusername=/Library/LaunchAgents/restic_backup.plist
 Initilize repo and test password with init_repo.sh script. (check restic binary path)
 
 Files created from scripts:
+
 Log file: /usr/local/var/log/restic-backup.log
+
 pid file: /usr/local/var/restic/.restic_backup.pid
+
 timestamp file: /usr/local/var/restic/.restic_backup_timestamp
 
